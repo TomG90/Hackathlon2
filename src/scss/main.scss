@@ -9,6 +9,7 @@
 
 body {
   margin: 0;
+  font-family: 'Press Start 2P', cursive;
 }
 
 $width: 19;
@@ -18,13 +19,15 @@ $size: 3vw;
 .container {
   display: grid;
   zoom: 1.5;
-  // grid-template-columns: repeat(18);
-  // grid-template-rows: repeat(8);
+
   width: $width * $size;
   height: $height * $size;
-  // background-color: lightgray;
   background-image: url('/img/tile.png');
   background-size: $size $size;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .stage {
@@ -109,5 +112,16 @@ $size: 3vw;
 
   &-active-dark {
     background-image: url('/img/pacgirl-active-dark.png');
+  }
+}
+
+.score--container {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  font-size: 24px;
+
+  .score {
+    display: inline-block;
   }
 }
