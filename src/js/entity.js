@@ -9,8 +9,8 @@ class Entity {
   render() {
     const wallDiv = document.createElement('div')
     wallDiv.classList.add('entity', `entity--${this.type}`)
-    wallDiv.style.left = `${this.x * 3}vw`
-    wallDiv.style.top = `${this.y * 3}vw`
+    wallDiv.style.left = `${this.x * 3}vh`
+    wallDiv.style.top = `${this.y * 3}vh`
 
     return wallDiv
   }

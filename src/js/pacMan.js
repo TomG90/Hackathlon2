@@ -29,8 +29,8 @@ class PacMan {
     this.element.classList.remove('entity--pac-up', 'entity--pac-down', 'entity--pac-left', 'entity--pac-right')
     this.element.classList.add(`entity--pac-${this.direction}`)
 
-    this.element.style.left = `${this.x * 3}vw`
-    this.element.style.top = `${this.y * 3}vw`
+    this.element.style.left = `${this.x * 3}vh`
+    this.element.style.top = `${this.y * 3}vh`
   }
 
   moveLeft() {
