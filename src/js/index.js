@@ -96,6 +96,12 @@ const walls = [
 
 ]
 
+const bombs = [
+    
+
+
+]
+
 for (const wall of walls) {
   new Wall(wall.x, wall.y).mount(container)
 }
