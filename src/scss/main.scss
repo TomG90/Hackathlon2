@@ -69,6 +69,7 @@ $size: 3vw;
 
   &--apple {
     background-image: url('/img/apple.png');
+    background-size: $size $size;
   }
 
   &--bomb {
