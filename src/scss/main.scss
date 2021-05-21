@@ -47,10 +47,10 @@ $size: 3vw;
   }
 
   &--pac-left {
-    background-position-y: 0;
+    background-position-y: $size * 3;
   }
   &--pac-right {
-    background-position-y: $size * 3;
+    background-position-y: 0;
   }
   &--pac-down {
     background-position-y: $size * 2;
