@@ -94,19 +94,36 @@ const entities = [
   new Entity(17, 8, 'wall', false),
 
   //apples
-  new Entity(1, 0, 'apple', true),
-  new Entity(1, 0, 'apple', true),
+  new Entity(2, 0, 'apple', true),
+  new Entity(8, 0, 'apple', true),
+  new Entity(9, 0, 'apple', true),
+
+  new Entity(8, 1, 'apple', true),
+
+  new Entity(10, 2, 'apple', true),
+
+  new Entity(0, 4, 'apple', true),
+  new Entity(8, 4, 'apple', true),
+
+  new Entity(9, 6, 'apple', true),
+  new Entity(11, 6, 'apple', true),
+
+  new Entity(7, 8, 'apple', true),
+  new Entity(12, 8, 'apple', true),
+  new Entity(13, 8, 'apple', true),
+  new Entity(15, 8, 'apple', true),
 
 
   //bombs 
-  new Entity(5, 0, 'bomb', true),
+  new Entity(12, 2, 'bomb', true),
+  new Entity(14, 4, 'bomb', true),
+  new Entity(8, 7, 'bomb', true),
+
 ]
 
 
 
-for (const wall of walls) {
-  new Wall(wall.x, wall.y).mount(container)
-}
+
 for (const entity of entities) {
   entity.mount(container)
 }

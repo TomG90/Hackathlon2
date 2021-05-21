@@ -75,6 +75,7 @@ $size: 3vw;
 
   &--bomb {
     background-image: url('/img/bomb.png');
+    background-size: $size $size;
   }
 
   &--tomb {
