@@ -2,21 +2,28 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: sans-serif;
-  font-size: 15px;
-}
+// html {
+//   font-family: sans-serif;
+//   font-size: 15px;
+// }
 
 body {
   margin: 0;
 }
 
+$width: 19;
+$height: 9;
+$size: 3vw;
+
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+  display: grid;
+  // grid-template-columns: repeat(18);
+  // grid-template-rows: repeat(8);
+  width: $width * $size;
+  height: $height * $size;
+  // background-color: lightgray;
+  background-image: url('/img/tile.png');
+  background-size: $size $size;
 }
 
 .stage {
@@ -28,19 +35,36 @@ body {
 
 .entity {
   position: absolute;
-  width: 85px;
-  height: 85px;
+  width: $size;
+  height: $size;
 
   &--pac {
     position: absolute;
     font-weight: bold;
     text-align: center;
-    padding-top: 65px;
-    user-select: none;    
+    user-select: none;
+    background-size: $size * 2 $size * 4;
+  }
+
+  &--pac-left {
+    background-position-y: 0;
+  }
+  &--pac-right {
+    background-position-y: $size * 3;
+  }
+  &--pac-down {
+    background-position-y: $size * 2;
+  }
+  &--pac-up {
+    background-position-y: $size;
+  }
+  &--pac-closed {
+    background-position-x: $size;
   }
 
   &--wall {
     background-image: url('/img/wall.png');
+    background-size: $size $size;
   }
 
   &--apple {
