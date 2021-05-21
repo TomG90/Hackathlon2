@@ -95,16 +95,18 @@ const entities = [
 
   //apples
   new Entity(1, 0, 'apple', true),
+  new Entity(1, 0, 'apple', true),
+
+
+  //bombs 
+  new Entity(5, 0, 'bomb', true),
 ]
 
-const bombs = [
-    
 
-
-]
 
 for (const wall of walls) {
   new Wall(wall.x, wall.y).mount(container)
+}
 for (const entity of entities) {
   entity.mount(container)
 }
@@ -120,3 +122,4 @@ function collisionDetection(x, y) {
 
   return null
 }
+
