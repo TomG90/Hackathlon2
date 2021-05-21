@@ -101,3 +101,8 @@ for (const wall of walls) {
 }
 
 new PacMan(0, 0, 'pacgirl-active-light').mount(container)
+
+// function collisionDetection(x,y){
+//     const pacMan = PacMan
+
+// }

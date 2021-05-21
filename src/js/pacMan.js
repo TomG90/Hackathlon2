@@ -28,25 +28,32 @@ class PacMan {
     this.element.classList.toggle('entity--pac-closed')
     this.element.classList.remove('entity--pac-up', 'entity--pac-down', 'entity--pac-left', 'entity--pac-right')
     this.element.classList.add(`entity--pac-${this.direction}`)
+
+    this.element.style.left = `${this.x * 3}vw`
+    this.element.style.top = `${this.y * 3}vw`
   }
 
   moveLeft() {
     this.direction = 'left'
+    this.x -= 1
     this.update()
   }
 
   moveRight() {
     this.direction = 'right'
+    this.x += 1
     this.update()
   }
 
   moveUp() {
     this.direction = 'up'
+    this.y -= 1
     this.update()
   }
 
   moveDown() {
     this.direction = 'down'
+    this.y += 1
     this.update()
   }
 
