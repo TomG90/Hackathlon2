@@ -17,6 +17,7 @@ $size: 3vw;
 
 .container {
   display: grid;
+  zoom: 1.5;
   // grid-template-columns: repeat(18);
   // grid-template-rows: repeat(8);
   width: $width * $size;
