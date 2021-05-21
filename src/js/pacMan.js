@@ -74,11 +74,8 @@ class PacMan {
 
   moveDown() {
     this.direction = 'down'
-    const entity = collisionDetection(this.x, this.y + 1)
-    if (entity && entity.canHit) {
-      entity.unMount()
-    }
-    if (!entity || entity.canHit) {
+
+    if (!collisionDetection(this.x, this.y + 1)) {
       this.y += 1
       this.y = Math.min(8, this.y)
     }

@@ -113,16 +113,11 @@ const entities = [
   new Entity(13, 8, 'apple', true),
   new Entity(15, 8, 'apple', true),
 
-
-  //bombs 
+  //bombs
   new Entity(12, 2, 'bomb', true),
   new Entity(14, 4, 'bomb', true),
   new Entity(8, 7, 'bomb', true),
-
 ]
-
-
-
 
 for (const entity of entities) {
   entity.mount(container)
@@ -133,10 +128,23 @@ new PacMan('pacgirl-active-light').mount(container)
 function collisionDetection(x, y) {
   for (const entity of entities) {
     if (x === entity.x && y === entity.y) {
-      return entity
+      if (entity.canHit) {
+        removeEntity(entity)
+      }
+
+      return !entity.canHit
     }
   }
 
   return null
 }
 
+const divScore = document.querySelector('.score')
+let score = 0
+function removeEntity(entity) {
+  if (entity.type === 'apple') {
+    score += 10
+    divScore.textContent = score
+  }
+  entity.unMount()
+}
