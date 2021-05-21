@@ -34,28 +34,38 @@ class PacMan {
   }
 
   moveLeft() {
-    if (!collisionDetection(this.x - 1, this.y)) {
-      this.direction = 'left'
+    this.direction = 'left'
+    const entity = collisionDetection(this.x - 1, this.y)
+    if (entity && entity.canHit) {
+      entity.unMount()
+    }
+    if (!entity || entity.canHit) {
       this.x -= 1
       this.x = Math.max(0, this.x)
-
-      this.update()
     }
+    this.update()
   }
 
   moveRight() {
-    if (!collisionDetection(this.x + 1, this.y)) {
-      this.direction = 'right'
+    this.direction = 'right'
+    const entity = collisionDetection(this.x + 1, this.y)
+    if (entity && entity.canHit) {
+      entity.unMount()
+    }
+    if (!entity || entity.canHit) {
       this.x += 1
       this.x = Math.min(18, this.x)
-
-      this.update()
     }
+    this.update()
   }
 
   moveUp() {
-    if (!collisionDetection(this.x, this.y - 1)) {
-      this.direction = 'up'
+    this.direction = 'up'
+    const entity = collisionDetection(this.x, this.y - 1)
+    if (entity && entity.canHit) {
+      entity.unMount()
+    }
+    if (!entity || entity.canHit) {
       this.y -= 1
       this.y = Math.max(0, this.y)
       this.update()
@@ -63,12 +73,16 @@ class PacMan {
   }
 
   moveDown() {
-    if (!collisionDetection(this.x, this.y + 1)) {
-      this.direction = 'down'
+    this.direction = 'down'
+    const entity = collisionDetection(this.x, this.y + 1)
+    if (entity && entity.canHit) {
+      entity.unMount()
+    }
+    if (!entity || entity.canHit) {
       this.y += 1
       this.y = Math.min(8, this.y)
-      this.update()
     }
+    this.update()
   }
 
   mount(parent) {

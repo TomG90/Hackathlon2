@@ -4,97 +4,97 @@ const container = document.querySelector('.container')
 
 const entities = [
   //line 1
-  { type: 'wall', canHit: false, x: 5, y: 0 },
-  { type: 'wall', canHit: false, x: 7, y: 0 },
-  { type: 'wall', canHit: false, x: 11, y: 0 },
-  { type: 'wall', canHit: false, x: 15, y: 0 },
+  new Entity(5, 0, 'wall', false),
+  new Entity(7, 0, 'wall', false),
+  new Entity(11, 0, 'wall', false),
+  new Entity(15, 0, 'wall', false),
 
   //line2
-  { type: 'wall', canHit: false, x: 1, y: 1 },
-  { type: 'wall', canHit: false, x: 2, y: 1 },
-  { type: 'wall', canHit: false, x: 3, y: 1 },
-  { type: 'wall', canHit: false, x: 4, y: 1 },
-  { type: 'wall', canHit: false, x: 5, y: 1 },
-  { type: 'wall', canHit: false, x: 7, y: 1 },
-  { type: 'wall', canHit: false, x: 9, y: 1 },
-  { type: 'wall', canHit: false, x: 11, y: 1 },
-  { type: 'wall', canHit: false, x: 13, y: 1 },
-  { type: 'wall', canHit: false, x: 15, y: 1 },
-  { type: 'wall', canHit: false, x: 17, y: 1 },
-  { type: 'wall', canHit: false, x: 18, y: 1 },
+  new Entity(1, 1, 'wall', false),
+  new Entity(2, 1, 'wall', false),
+  new Entity(3, 1, 'wall', false),
+  new Entity(4, 1, 'wall', false),
+  new Entity(5, 1, 'wall', false),
+  new Entity(7, 1, 'wall', false),
+  new Entity(9, 1, 'wall', false),
+  new Entity(11, 1, 'wall', false),
+  new Entity(13, 1, 'wall', false),
+  new Entity(15, 1, 'wall', false),
+  new Entity(17, 1, 'wall', false),
+  new Entity(18, 1, 'wall', false),
 
   //line3
-  { type: 'wall', canHit: false, x: 5, y: 2 },
-  { type: 'wall', canHit: false, x: 9, y: 2 },
-  { type: 'wall', canHit: false, x: 13, y: 2 },
+  new Entity(5, 2, 'wall', false),
+  new Entity(9, 2, 'wall', false),
+  new Entity(13, 2, 'wall', false),
 
   //line4
-  { type: 'wall', canHit: false, x: 0, y: 3 },
-  { type: 'wall', canHit: false, x: 1, y: 3 },
-  { type: 'wall', canHit: false, x: 2, y: 3 },
-  { type: 'wall', canHit: false, x: 3, y: 3 },
-  { type: 'wall', canHit: false, x: 5, y: 3 },
-  { type: 'wall', canHit: false, x: 7, y: 3 },
-  { type: 'wall', canHit: false, x: 8, y: 3 },
-  { type: 'wall', canHit: false, x: 9, y: 3 },
-  { type: 'wall', canHit: false, x: 10, y: 3 },
-  { type: 'wall', canHit: false, x: 11, y: 3 },
-  { type: 'wall', canHit: false, x: 12, y: 3 },
-  { type: 'wall', canHit: false, x: 13, y: 3 },
-  { type: 'wall', canHit: false, x: 15, y: 3 },
-  { type: 'wall', canHit: false, x: 16, y: 3 },
-  { type: 'wall', canHit: false, x: 17, y: 3 },
-  { type: 'wall', canHit: false, x: 18, y: 3 },
+  new Entity(0, 3, 'wall', false),
+  new Entity(1, 3, 'wall', false),
+  new Entity(2, 3, 'wall', false),
+  new Entity(3, 3, 'wall', false),
+  new Entity(5, 3, 'wall', false),
+  new Entity(7, 3, 'wall', false),
+  new Entity(8, 3, 'wall', false),
+  new Entity(9, 3, 'wall', false),
+  new Entity(10, 3, 'wall', false),
+  new Entity(11, 3, 'wall', false),
+  new Entity(12, 3, 'wall', false),
+  new Entity(13, 3, 'wall', false),
+  new Entity(15, 3, 'wall', false),
+  new Entity(16, 3, 'wall', false),
+  new Entity(17, 3, 'wall', false),
+  new Entity(18, 3, 'wall', false),
 
   //line5
-  { type: 'wall', canHit: false, x: 3, y: 4 },
-  { type: 'wall', canHit: false, x: 7, y: 4 },
-  { type: 'wall', canHit: false, x: 11, y: 4 },
-  { type: 'wall', canHit: false, x: 17, y: 4 },
+  new Entity(3, 4, 'wall', false),
+  new Entity(7, 4, 'wall', false),
+  new Entity(11, 4, 'wall', false),
+  new Entity(17, 4, 'wall', false),
 
   //line6
-  { type: 'wall', canHit: false, x: 1, y: 5 },
-  { type: 'wall', canHit: false, x: 3, y: 5 },
-  { type: 'wall', canHit: false, x: 4, y: 5 },
-  { type: 'wall', canHit: false, x: 5, y: 5 },
-  { type: 'wall', canHit: false, x: 7, y: 5 },
-  { type: 'wall', canHit: false, x: 9, y: 5 },
-  { type: 'wall', canHit: false, x: 10, y: 5 },
-  { type: 'wall', canHit: false, x: 11, y: 5 },
-  { type: 'wall', canHit: false, x: 13, y: 5 },
-  { type: 'wall', canHit: false, x: 14, y: 5 },
-  { type: 'wall', canHit: false, x: 15, y: 5 },
-  { type: 'wall', canHit: false, x: 16, y: 5 },
-  { type: 'wall', canHit: false, x: 17, y: 5 },
+  new Entity(1, 5, 'wall', false),
+  new Entity(3, 5, 'wall', false),
+  new Entity(4, 5, 'wall', false),
+  new Entity(5, 5, 'wall', false),
+  new Entity(7, 5, 'wall', false),
+  new Entity(9, 5, 'wall', false),
+  new Entity(10, 5, 'wall', false),
+  new Entity(11, 5, 'wall', false),
+  new Entity(13, 5, 'wall', false),
+  new Entity(14, 5, 'wall', false),
+  new Entity(15, 5, 'wall', false),
+  new Entity(16, 5, 'wall', false),
+  new Entity(17, 5, 'wall', false),
 
   //line7
-  { type: 'wall', canHit: false, x: 1, y: 6 },
-  { type: 'wall', canHit: false, x: 7, y: 6 },
-  { type: 'wall', canHit: false, x: 15, y: 6 },
+  new Entity(1, 6, 'wall', false),
+  new Entity(7, 6, 'wall', false),
+  new Entity(15, 6, 'wall', false),
 
   //line8
-  { type: 'wall', canHit: false, x: 0, y: 7 },
-  { type: 'wall', canHit: false, x: 1, y: 7 },
-  { type: 'wall', canHit: false, x: 3, y: 7 },
-  { type: 'wall', canHit: false, x: 4, y: 7 },
-  { type: 'wall', canHit: false, x: 5, y: 7 },
-  { type: 'wall', canHit: false, x: 6, y: 7 },
-  { type: 'wall', canHit: false, x: 7, y: 7 },
-  { type: 'wall', canHit: false, x: 9, y: 7 },
-  { type: 'wall', canHit: false, x: 11, y: 7 },
-  { type: 'wall', canHit: false, x: 12, y: 7 },
-  { type: 'wall', canHit: false, x: 13, y: 7 },
-  { type: 'wall', canHit: false, x: 14, y: 7 },
-  { type: 'wall', canHit: false, x: 15, y: 7 },
-  { type: 'wall', canHit: false, x: 17, y: 7 },
+  new Entity(0, 7, 'wall', false),
+  new Entity(1, 7, 'wall', false),
+  new Entity(3, 7, 'wall', false),
+  new Entity(4, 7, 'wall', false),
+  new Entity(5, 7, 'wall', false),
+  new Entity(6, 7, 'wall', false),
+  new Entity(7, 7, 'wall', false),
+  new Entity(9, 7, 'wall', false),
+  new Entity(11, 7, 'wall', false),
+  new Entity(12, 7, 'wall', false),
+  new Entity(13, 7, 'wall', false),
+  new Entity(14, 7, 'wall', false),
+  new Entity(15, 7, 'wall', false),
+  new Entity(17, 7, 'wall', false),
 
   //line9
-  { type: 'wall', canHit: false, x: 3, y: 8 },
-  { type: 'wall', canHit: false, x: 9, y: 8 },
-  { type: 'wall', canHit: false, x: 17, y: 8 },
+  new Entity(3, 8, 'wall', false),
+  new Entity(9, 8, 'wall', false),
+  new Entity(17, 8, 'wall', false),
 
   //apples
-  { type: 'apple', canHit: true, x: 1, y: 0 },
+  new Entity(1, 0, 'apple', true),
 ]
 
 const bombs = [
@@ -106,7 +106,7 @@ const bombs = [
 for (const wall of walls) {
   new Wall(wall.x, wall.y).mount(container)
 for (const entity of entities) {
-  new Entity(entity.x, entity.y, entity.type).mount(container)
+  entity.mount(container)
 }
 
 new PacMan('pacgirl-active-light').mount(container)
@@ -114,9 +114,9 @@ new PacMan('pacgirl-active-light').mount(container)
 function collisionDetection(x, y) {
   for (const entity of entities) {
     if (x === entity.x && y === entity.y) {
-      return !entity.canHit
+      return entity
     }
   }
 
-  return false
+  return null
 }

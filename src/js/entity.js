@@ -1,8 +1,9 @@
 class Entity {
-  constructor(x, y, type) {
+  constructor(x, y, type, canHit) {
     this.x = x
     this.y = y
     this.type = type
+    this.canHit = canHit
   }
 
   render() {
@@ -17,5 +18,9 @@ class Entity {
   mount(parent) {
     this.element = this.render()
     parent.appendChild(this.element)
+  }
+
+  unMount() {
+    this.element.remove()
   }
 }
