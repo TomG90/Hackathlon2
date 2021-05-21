@@ -82,6 +82,10 @@ class PacMan {
     this.update()
   }
 
+  die() {
+    this.element.remove()
+  }
+
   mount(parent) {
     this.element = this.render()
     parent.appendChild(this.element)

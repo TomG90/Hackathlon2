@@ -80,6 +80,7 @@ $size: 3vw;
 
   &--tomb {
     background-image: url('/img/tomb.png');
+    background-size: $size $size;
   }
 }
 
