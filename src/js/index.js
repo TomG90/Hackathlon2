@@ -1,30 +1,18 @@
 'use strict'
-const right = 'ArrowRight'
-const left = 'ArrowLeft'
-const up = 'ArrowUp'
-const down = 'ArrowDown'
 
-const keyArrows = [right, left, up, down]
+const container = document.querySelector('.container')
 
-const pacMan = document.querySelector('.entity--pac')
-document.addEventListener('keyup', (event) => {
-  if (keyArrows.includes(event.code)) {
-    pacMan.classList.toggle('entity--pac-closed')
-    pacMan.classList.remove('entity--pac-up', 'entity--pac-down', 'entity--pac-left', 'entity--pac-right')
-    if (event.code === right) {
-      pacMan.classList.add('entity--pac-right')
-    }
+const walls = [
+  //line 1
+  { x: 5, y: 0 },
 
-    if (event.code === left) {
-      pacMan.classList.add('entity--pac-left')
-    }
+  //line2
+  { x: 1, y: 1 },
+  { x: 2, y: 1 },
+]
 
-    if (event.code === up) {
-      pacMan.classList.add('entity--pac-up')
-    }
+for (const wall of walls) {
+  new Wall(wall.x, wall.y).mount(container)
+}
 
-    if (event.code === down) {
-      pacMan.classList.add('entity--pac-down')
-    }
-  }
-})
+new PacMan(0, 0, 'pacgirl-active-light').mount(container)
