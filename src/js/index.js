@@ -112,3 +112,5 @@ function collisionDetection(x, y) {
 
   return null
 }
+
+function removeEntity() {}
